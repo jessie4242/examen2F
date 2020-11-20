@@ -1,4 +1,3 @@
-
 //Nav
 $(()=>{
     $('#ham').click(()=>{
@@ -16,7 +15,6 @@ $(document).on('click','#btn-add',function(e) {
 		processData: false,
 		url: "conexiones/accionesCRUD.php",
 		success: function(dataResult){
-			//(dataResult);
 			$('#agregarModal').modal('hide');
 			location.reload();	
 		}
@@ -26,12 +24,10 @@ $(document).on('click','#btn-add',function(e) {
 
 	$(document).on('click','.update',function(e) {
 		var id=$(this).attr("data-id");
-		//var imagen=$(this).attr("data-imagen");
 		var nombre=$(this).attr("data-nombre");
 		var precio=$(this).attr("data-precio");
 		var descripcion=$(this).attr("data-descripcion");
 		$('#idM').val(id);
-		//$('#imagenM').val(imagen);
 		$('#nombreM').val(nombre);
 		$('#precioM').val(precio);
 		$('#descripcionM').val(descripcion);
