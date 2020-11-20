@@ -31,7 +31,7 @@ include 'conexiones/conexion.php';
   <section class="hero" id="InicioAncla" style="background-image: url(https://images.pexels.com/photos/4113660/pexels-photo-4113660.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);">
       <div class="hero-content">
         <div class="hero-description">
-          <h1 class="tittle_h1">PRODUCTOS SUIREN</h1>
+          <h1 class="tittle_h1">SODAS SUIREN</h1>
           <h3>Las mejores gaseosas para esos momentos únicos.</h3>
           <button class="button">Ver más</button>
         </div>
