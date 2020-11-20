@@ -1,0 +1,36 @@
+@use '../utils/mixins';
+
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100&family=Libre+Baskerville&display=swap');
+
+body {
+    font-family: 'Libre Baskerville', serif;
+}
+// Weights
+$font-weight-regular: 50px;
+$font-weight-medium:  30px;
+$font-weight-bold:    15px;
+
+// Size
+$font-size-big: 40px;
+$font-size-medium:  20px;
+
+//margin
+$margin-text-max: 30px;
+$margin-text-med: 20px;
+$margin-text-small: 15px;
+
+h1{
+    @include mixins.typography($font-size-big, $font-weight-bold, $margin-text-max);  
+}
+
+h3{
+    @include mixins.typography($font-size-medium, $font-weight-bold, $margin-text-med);  
+}
+
+div, p{ 
+    @include mixins.typography($font-size-medium, $font-weight-regular, $margin-text-small);  
+}
+
+.tittle{
+    @include mixins.centerData;
+}

@@ -1,0 +1,33 @@
+
+@use '../utils/mixins';
+@use '../utils/variables';
+
+header{
+    margin-top: -20px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    
+    padding: 10px;
+    background-color: variables.$colour-secundary;
+    div{
+        display: flex;
+        justify-content: space-between;
+        a{
+            @include mixins.reset-links;
+        }
+        .menu{
+            display: none;
+        }
+    }
+   
+}
+
+
+@media (max-width: map-get($map: variables.$breakpoints, $key:'small')){ 
+    @include mixins.dist-emp;  
+    .conjButton{
+        display: flex;
+        flex-direction: column;
+    }
+}

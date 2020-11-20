@@ -1,0 +1,95 @@
+@use '../utils/variables';
+@use '../utils/mixins';
+@use '../base/animations';
+//@use '../base/responsive';
+
+.hero {
+    text-align: center;
+    padding-bottom: 5em;
+    background-blend-mode: multiply;
+    background-repeat: no-repeat;
+    background-color: rgba(7, 52, 70, 0.4);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    color: variables.$colour-body;
+    margin-bottom: 100px;
+    margin-top: -15px;
+    .hero-content{
+        padding: 150px;
+        @include mixins.centerData;
+    }
+    .tittle_h1{
+        font-size: 80px;
+        padding-top: 80px;
+        animation-duration: 2s;
+        animation-name: BannerSlidein;
+    }
+
+}
+
+.nosotros{
+     display: grid;
+     grid-template-columns: 1fr 1fr;
+     p{
+         display: flex;
+         flex-direction: vertical;
+         align-items: center;
+     }
+     @media (max-width: map-get($map: variables.$breakpoints, $key:'medio')){
+        grid-template-columns: 1fr;
+    }
+     @media (max-width: map-get($map: variables.$breakpoints, $key:'small')){
+        img{
+            width: 0px;
+            height: 0px;
+        }
+        p{
+            width: 50px;
+        }
+    }
+}
+.titulos{
+    @include mixins.centerData;
+}
+ 
+.galMarcas{
+    @include mixins.centerData;
+    .marcas{
+        display: grid;
+        grid-gap: variables.$tam-gap;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;  
+        img{
+            border: 5px solid variables.$colour-secundary;
+            margin: 15px;
+            border-radius: 15px;
+            -webkit-transition: margin 0.5s ease-out;
+            -moz-transition: margin 0.5s ease-out;
+            -ms-transition: margin 0.5s ease-out;
+            transition: margin 0.5s ease-out;
+            &:hover{
+                filter: opacity(.5);
+                margin-top: 2px;
+            }
+        }
+        @media (max-width: map-get($map: variables.$breakpoints, $key:'medio')){
+            grid-template-columns: 1fr 1fr;
+        }
+        @media (max-width: map-get($map: variables.$breakpoints, $key:'small')){
+            grid-template-columns: 1fr;
+        }
+    }
+}
+.catalogoProds{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    @media (max-width: map-get($map: variables.$breakpoints, $key:'medio')){
+        grid-template-columns: 1fr 1fr;
+        margin-left: -100px;
+    }
+    @media (max-width: map-get($map: variables.$breakpoints, $key:'small')){
+        grid-template-columns: 1fr;
+    }
+}
+  

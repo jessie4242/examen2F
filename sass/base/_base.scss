@@ -1,0 +1,48 @@
+@use '../utils/variables';
+@use '../utils/mixins';
+@use 'animations';
+
+*{
+    margin: 0;
+    padding: 0; 
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body{
+    background: variables.$colour-body;
+    margin: 20px 0;
+    font-family: 'Heebo', sans-serif;
+}
+.titulo{
+    margin: auto;
+    //grid-row-start: 3;
+    padding-bottom: 20px;
+    font-size: 25px;
+    @include mixins.centerData;
+}
+.titulo h1{
+    //color: var(--primary);
+    position: relative;
+}
+.titulo h1 span{
+    position: absolute;
+    right:0px;
+    width: 0px;
+    background: variables.$colour-body;
+    border-left: 1px solid #000;
+
+    animation: maquina 4s infinite alternate steps(16);
+}
+
+#nos-img{
+    height: 300px;
+    width: 400px;
+    border-radius: 20px;  
+}
+.galeria img{
+    width: 500px;
+    margin-left: 80px;
+}
+
+

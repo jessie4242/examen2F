@@ -1,0 +1,66 @@
+@use 'variables';
+
+@mixin typography ($size, $weight , $margin) {
+    font-weight:  $weight;
+    font-size: $size;
+    margin: $margin;
+}
+
+@mixin reset-lists{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+@mixin reset-links{
+    color: variables.$colour-body;
+    text-decoration:none;
+}
+
+@mixin centerData {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin menu-movil {
+    header{
+        flex-direction: column;
+        div.t{
+            width: 100%;
+        }
+        nav ul{
+            flex-direction: column;
+            li{
+                width: 100%;
+                a{
+                    margin: 0;
+                }
+            }
+        }
+        div.menu{
+            display: block;
+            margin: 10px;
+        }
+        nav{
+            display: none;
+        }
+        nav.active{
+            display: block;
+            width: 100%;
+        }
+    }
+}
+
+@mixin dist-emp {
+    section .emp{
+        grid-template-areas: "header-img"
+                             "header-text";
+        grid-template-rows: 1fr 1fr;
+         
+        padding-right: 15px;
+    }
+    @include menu-movil;
+}
+
+

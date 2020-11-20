@@ -1,0 +1,36 @@
+@use '../utils/variables';
+@use '../utils/mixins';
+//@use '../base/responsive';
+
+  #contactos{
+    display:flex;
+    flex-direction: column;
+    //background-color: variables.$colour-primary;
+    margin-top:20px;
+    @include mixins.centerData;        
+
+    input[type="text"], input[type="email"]{
+      padding:3px 5px;
+      display:inline-block;
+      @include mixins.forms;
+      border-color: variables.$colour-secundary;
+      border-width: 2px;
+    }
+    textarea{
+      height:100px;	
+      resize:none;
+      display:block;
+      margin-bottom: 25px;
+      @include mixins.forms;
+      border-color: variables.$colour-secundary;
+      border-width: 2px;
+    }
+  }
+  
+
+
+  
+
+     
+ 
+ 

@@ -1,0 +1,14 @@
+@use '../utils/variables';
+table{
+    background-color: variables.$colour-secundary;
+    //color: variables.$colour-body;
+    thead{
+        font-size: 20px;
+        th{
+            font-size: 18px;
+        }
+    }
+    tbody{
+        font-size: 15px;
+    }
+}
